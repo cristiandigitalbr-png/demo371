@@ -95,25 +95,35 @@
   .about-image::after { content: ''; position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px; background: rgba(26,45,90,0.06); border-radius: 2px; z-index: -1; }
   .about-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.2; z-index: -1; }
 
-  /* SERVICIOS - vertical en mobile */
-  .servicios-wrap { background: var(--navy-dark); padding: 80px 50px; }
-  .servicios { max-width: 800px; margin: 0 auto; }
+  /* SERVICIOS - premium light */
+  .servicios-wrap { background: var(--cream); padding: 80px 50px; }
+  .servicios { max-width: 900px; margin: 0 auto; }
   .servicios-header { text-align: center; margin-bottom: 50px; }
-  .servicios-header .section-divider { margin: 0 auto; background: var(--blue-light); opacity: 0.5; }
-  .servicios-header .section-label { color: var(--blue-light); }
-  .servicios-header .section-title { color: white; }
+  .servicios-header .section-divider { margin: 0 auto; background: var(--navy); opacity: 0.3; }
+  .servicios-header .section-label { color: var(--blue); }
+  .servicios-header .section-title { color: var(--dark); }
 
-  .servicio-grupo { margin-bottom: 32px; }
-  .servicio-grupo-titulo {
-    font-family: 'Libre Baskerville', serif; font-size: 18px; font-weight: 700;
-    color: white; letter-spacing: 0.5px; margin-bottom: 14px;
-    padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: flex; align-items: center; gap: 12px;
+  .servicios-grid-grupos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+  .servicio-grupo {
+    background: white; border-radius: 2px; padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(26,45,90,0.08);
+    border-top: 3px solid var(--navy);
+    margin-bottom: 0;
   }
-  .servicio-grupo-titulo span { color: var(--blue-light); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Outfit', sans-serif; font-weight: 400; }
-  .servicio-items { display: flex; flex-direction: column; gap: 10px; padding-left: 8px; }
-  .servicio-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.65); font-weight: 300; letter-spacing: 0.3px; }
-  .servicio-item::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; }
+  .servicio-grupo-titulo {
+    font-family: 'Libre Baskerville', serif; font-size: 17px; font-weight: 700;
+    color: var(--navy); letter-spacing: 0.3px; margin-bottom: 6px;
+    display: block;
+  }
+  .servicio-grupo-titulo span { display: block; color: var(--blue-light); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Outfit', sans-serif; font-weight: 500; margin-top: 4px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(26,45,90,0.1); }
+  .servicio-items { display: flex; flex-direction: column; gap: 10px; }
+  .servicio-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray); font-weight: 300; }
+  .servicio-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--navy); flex-shrink: 0; opacity: 0.4; }
+
+  @media (max-width: 768px) {
+    .servicios-grid-grupos { grid-template-columns: 1fr; }
+  }
 
   /* MID BANNER */
   .mid-banner { background: var(--blue-pale); padding: 70px 50px; text-align: center; position: relative; overflow: hidden; border-top: 3px solid var(--navy); }
@@ -222,36 +232,30 @@
       <div class="section-divider"></div>
     </div>
 
-    <div class="servicio-grupo">
-      <div class="servicio-grupo-titulo">
-        Derecho de Familia <span>· Familia</span>
+    <div class="servicios-grid-grupos">
+      <div class="servicio-grupo">
+        <div class="servicio-grupo-titulo">Derecho de Familia <span>Familia</span></div>
+        <div class="servicio-items">
+          <div class="servicio-item">Divorcios</div>
+          <div class="servicio-item">Violencia familiar</div>
+          <div class="servicio-item">Cuota alimentaria</div>
+        </div>
       </div>
-      <div class="servicio-items">
-        <div class="servicio-item">Divorcios</div>
-        <div class="servicio-item">Violencia familiar</div>
-        <div class="servicio-item">Cuota alimentaria</div>
+      <div class="servicio-grupo">
+        <div class="servicio-grupo-titulo">Derecho Sucesorio <span>Sucesiones</span></div>
+        <div class="servicio-items">
+          <div class="servicio-item">Declaratoria de herederos</div>
+          <div class="servicio-item">Sucesiones</div>
+          <div class="servicio-item">Tractos abreviados</div>
+        </div>
       </div>
-    </div>
-
-    <div class="servicio-grupo">
-      <div class="servicio-grupo-titulo">
-        Derecho Sucesorio <span>· Sucesiones</span>
-      </div>
-      <div class="servicio-items">
-        <div class="servicio-item">Declaratoria de herederos</div>
-        <div class="servicio-item">Sucesiones</div>
-        <div class="servicio-item">Tractos abreviados</div>
-      </div>
-    </div>
-
-    <div class="servicio-grupo">
-      <div class="servicio-grupo-titulo">
-        Derecho Civil <span>· Civil</span>
-      </div>
-      <div class="servicio-items">
-        <div class="servicio-item">Accidentes de trabajo</div>
-        <div class="servicio-item">Cartas documento</div>
-        <div class="servicio-item">Contratos</div>
+      <div class="servicio-grupo">
+        <div class="servicio-grupo-titulo">Derecho Civil <span>Civil</span></div>
+        <div class="servicio-items">
+          <div class="servicio-item">Accidentes de trabajo</div>
+          <div class="servicio-item">Cartas documento</div>
+          <div class="servicio-item">Contratos</div>
+        </div>
       </div>
     </div>
   </div>
@@ -292,7 +296,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-monogram">MJB</div>
+  <div class="footer-monogram">MB</div>
   <div class="footer-name">Marcelo Ballestero</div>
   <div class="footer-divider"></div>
   <div class="footer-text">
