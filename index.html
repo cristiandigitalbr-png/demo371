@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Marcelo Ballestero | Abogado</title>
+<meta name="description" content="Abogado especializado en Derecho de Familia, Sucesorio y Civil. MP 1-34118. Juana Azurduy 455, Córdoba. WhatsApp: 3513223743">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2d5a;
+    --navy-light: #243470;
+    --navy-dark: #0f1a36;
+    --blue: #2a4a8a;
+    --blue-light: #4a6aaa;
+    --blue-pale: #eef2f8;
+    --silver: #8a9ab0;
+    --white: #ffffff;
+    --cream: #f5f6f8;
+    --dark: #0d1528;
+    --gray: #5a6478;
+    --light-gray: #d0d8e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 14px 50px; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,45,90,0.1);
+  }
+  .nav-brand { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+  .nav-monogram {
+    width: 40px; height: 40px; background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700;
+    color: white; letter-spacing: -1px;
+  }
+  .nav-brand-name { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; color: var(--navy); display: block; line-height: 1.2; }
+  .nav-brand-sub { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-light); font-weight: 400; display: block; }
+  .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); transition: color 0.3s; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { background: var(--navy) !important; color: white !important; padding: 10px 22px; border-radius: 2px; font-size: 11px !important; }
+
+  /* HERO */
+  .hero {
+    height: 80vh; min-height: 560px; position: relative;
+    display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('Post de Instagram - Cada lunes es una invitación a comenzar desde adentro (2).png');
+    background-size: cover; background-position: center;
+    filter: brightness(0.12) saturate(0.4);
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(26,45,90,0.6) 0%, rgba(13,21,40,0.2) 50%, rgba(13,21,40,0.75) 100%);
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 720px; padding: 60px 30px 0; animation: fadeUp 1s ease-out; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  .hero-eyebrow { font-size: 10px; letter-spacing: 6px; text-transform: uppercase; color: var(--blue-light); margin-bottom: 18px; font-weight: 400; display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 24px; height: 1px; background: var(--blue-light); opacity: 0.5; }
+  .hero-title { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3.5vw, 42px); font-weight: 700; color: white; line-height: 1.1; margin-bottom: 6px; }
+  .hero-subtitle { font-family: 'Libre Baskerville', serif; font-size: clamp(28px, 4.5vw, 58px); font-weight: 300; color: rgba(255,255,255,0.85); margin-bottom: 16px; display: block; letter-spacing: 1px; }
+  .hero-mp { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 3px; margin-bottom: 36px; }
+  .hero-divider { width: 40px; height: 1px; background: var(--blue-light); margin: 0 auto 36px; opacity: 0.5; }
+  .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; backdrop-filter: blur(4px); }
+  .btn-primary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; padding: 14px 32px; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); text-decoration: none; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+  /* SECTION */
+  .section-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; font-weight: 600; }
+  .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3vw, 38px); font-weight: 700; color: var(--dark); line-height: 1.15; margin-bottom: 14px; }
+  .section-divider { width: 36px; height: 2px; background: var(--navy); margin-bottom: 28px; opacity: 0.4; }
+
+  /* ABOUT */
+  .about-wrap { background: var(--white); padding: 90px 50px; }
+  .about { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .about-text p { font-size: 15px; line-height: 1.9; color: var(--gray); margin-bottom: 16px; text-align: center; font-weight: 300; }
+  .about-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--blue-pale); border: 1px solid rgba(26,45,90,0.15); border-radius: 2px; padding: 8px 16px; font-size: 11px; color: var(--navy); font-weight: 600; letter-spacing: 1px; margin-top: 8px; }
+
+  .about-image { position: relative; height: 560px; padding: 16px; background: white; box-shadow: 0 20px 60px rgba(26,45,90,0.15), 0 4px 16px rgba(0,0,0,0.06); border-radius: 2px; }
+  .about-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .about-image::before { content: ''; position: absolute; inset: 8px; border: 2px solid rgba(255,255,255,1); pointer-events: none; z-index: 2; }
+  .about-image::after { content: ''; position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px; background: rgba(26,45,90,0.06); border-radius: 2px; z-index: -1; }
+  .about-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.2; z-index: -1; }
+
+  /* SERVICIOS - vertical en mobile */
+  .servicios-wrap { background: var(--navy-dark); padding: 80px 50px; }
+  .servicios { max-width: 800px; margin: 0 auto; }
+  .servicios-header { text-align: center; margin-bottom: 50px; }
+  .servicios-header .section-divider { margin: 0 auto; background: var(--blue-light); opacity: 0.5; }
+  .servicios-header .section-label { color: var(--blue-light); }
+  .servicios-header .section-title { color: white; }
+
+  .servicio-grupo { margin-bottom: 32px; }
+  .servicio-grupo-titulo {
+    font-family: 'Libre Baskerville', serif; font-size: 18px; font-weight: 700;
+    color: white; letter-spacing: 0.5px; margin-bottom: 14px;
+    padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .servicio-grupo-titulo span { color: var(--blue-light); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Outfit', sans-serif; font-weight: 400; }
+  .servicio-items { display: flex; flex-direction: column; gap: 10px; padding-left: 8px; }
+  .servicio-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.65); font-weight: 300; letter-spacing: 0.3px; }
+  .servicio-item::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; }
+
+  /* MID BANNER */
+  .mid-banner { background: var(--blue-pale); padding: 70px 50px; text-align: center; position: relative; overflow: hidden; border-top: 3px solid var(--navy); }
+  .mid-banner-content { position: relative; z-index: 2; max-width: 560px; margin: 0 auto; }
+  .mid-banner-content h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .mid-banner-content p { color: var(--gray); font-size: 14px; margin-bottom: 30px; line-height: 1.7; font-weight: 300; }
+  .mid-divider { width: 36px; height: 2px; background: var(--navy); margin: 0 auto 20px; opacity: 0.3; }
+  .btn-navy { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; background: var(--navy); color: white; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
+  .btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,45,90,0.3); }
+
+  /* CONTACTO */
+  .contacto-wrap { background: var(--cream); padding: 60px 24px 36px; }
+  .contacto { max-width: 440px; margin: 0 auto; text-align: center; }
+  .contacto .section-divider { margin: 0 auto 28px; }
+  .contacto-items { display: flex; flex-direction: column; }
+  .contacto-item { padding: 18px 0; border-bottom: 1px solid rgba(26,45,90,0.1); }
+  .contacto-item:last-child { border-bottom: none; }
+  .contacto-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; font-weight: 600; }
+  .contacto-value { font-family: 'Libre Baskerville', serif; font-size: 18px; color: var(--dark); }
+  .contacto-value a { color: var(--navy); text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 600; }
+
+  /* FOOTER */
+  footer { background: var(--navy-dark); text-align: center; padding: 44px 24px; }
+  .footer-monogram { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: -1px; margin-bottom: 8px; }
+  .footer-name { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  .footer-divider { width: 32px; height: 1px; background: rgba(255,255,255,0.15); margin: 14px auto; }
+  .footer-text { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.25); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .about-wrap { padding: 50px 20px; }
+    .about { grid-template-columns: 1fr; gap: 36px; }
+    .about-image { height: 440px; }
+    .servicios-wrap { padding: 50px 20px; }
+    .mid-banner { padding: 50px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-brand">
+    <div class="nav-monogram">MB</div>
+    <div>
+      <span class="nav-brand-name">Marcelo Ballestero</span>
+      <span class="nav-brand-sub">Abogado · MP 1-34118</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Sobre Mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/543513223743" target="_blank" class="nav-cta">Consultar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Córdoba · Argentina</div>
+    <h1 class="hero-title">Dr. Marcelo Ballestero</h1>
+    <span class="hero-subtitle">Abogado</span>
+    <div class="hero-mp">MP 1-34118 · MNT 502 F. 231</div>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a href="https://wa.me/543513223743" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Consultar ahora
+      </a>
+      <a href="#servicios" class="btn-ghost">Ver Servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-wrap" id="nosotros">
+  <div class="about">
+    <div class="about-text">
+      <div class="section-label" style="text-align:center;">Sobre Mí</div>
+      <h2 class="section-title" style="text-align:center; font-size:clamp(20px,2.5vw,30px);">Dr. Marcelo Ballestero</h2>
+      <div class="section-divider" style="margin:0 auto 28px;"></div>
+      <p>Soy un destacado abogado especializado en Derecho de Familia, Sucesorio y Civil, con una reputación construida sobre la resolución efectiva de conflictos complejos.</p>
+      <p>Combino mi vasta experiencia con un enfoque profundamente humano, entendiendo que detrás de cada causa hay una persona que merece claridad, respeto y resultados concretos.</p>
+      <p>Mi compromiso inquebrantable con la justicia me convierte en un aliado fundamental en los momentos más cruciales, ofreciendo soluciones legales claras, precisas y orientadas a resultados.</p>
+      <div style="text-align:center; margin-top:12px;">
+        <span class="about-badge">MP 1-34118 · MNT 502 F. 231</span>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="ChatGPT Image 27 may 2026, 08_30_54.png" alt="Dr. Marcelo Ballestero">
+      <div class="about-image-accent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<div class="servicios-wrap" id="servicios">
+  <div class="servicios">
+    <div class="servicios-header">
+      <div class="section-label">Áreas de práctica</div>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="servicio-grupo">
+      <div class="servicio-grupo-titulo">
+        Derecho de Familia <span>· Familia</span>
+      </div>
+      <div class="servicio-items">
+        <div class="servicio-item">Divorcios</div>
+        <div class="servicio-item">Violencia familiar</div>
+        <div class="servicio-item">Cuota alimentaria</div>
+      </div>
+    </div>
+
+    <div class="servicio-grupo">
+      <div class="servicio-grupo-titulo">
+        Derecho Sucesorio <span>· Sucesiones</span>
+      </div>
+      <div class="servicio-items">
+        <div class="servicio-item">Declaratoria de herederos</div>
+        <div class="servicio-item">Sucesiones</div>
+        <div class="servicio-item">Tractos abreviados</div>
+      </div>
+    </div>
+
+    <div class="servicio-grupo">
+      <div class="servicio-grupo-titulo">
+        Derecho Civil <span>· Civil</span>
+      </div>
+      <div class="servicio-items">
+        <div class="servicio-item">Accidentes de trabajo</div>
+        <div class="servicio-item">Cartas documento</div>
+        <div class="servicio-item">Contratos</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MID BANNER -->
+<div class="mid-banner">
+  <div class="mid-banner-content">
+    <div class="section-label">Contacto Directo</div>
+    <div class="mid-divider"></div>
+    <h2>¿Necesitás asesoramiento legal?</h2>
+    <p>Escribime por WhatsApp y te respondo a la brevedad con total confidencialidad y compromiso.</p>
+    <a href="https://wa.me/543513223743" target="_blank" class="btn-navy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Hacé tu consulta
+    </a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contacto-wrap" id="contacto">
+  <div class="contacto">
+    <div class="section-label">Contacto</div>
+    <h2 class="section-title" style="font-size:clamp(22px,3vw,34px);">Encontranos</h2>
+    <div class="section-divider"></div>
+    <div class="contacto-items">
+      <div class="contacto-item">
+        <div class="contacto-label">Dirección</div>
+        <div class="contacto-value" style="font-size:16px;">Juana Azurduy 455, Córdoba</div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-label">WhatsApp</div>
+        <div class="contacto-value"><a href="https://wa.me/543513223743">3513-223743</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-monogram">MJB</div>
+  <div class="footer-name">Marcelo Ballestero</div>
+  <div class="footer-divider"></div>
+  <div class="footer-text">
+    Abogado · MP 1-34118 · Juana Azurduy 455, Córdoba<br>
+    <span style="font-size:11px; color:rgba(255,255,255,0.15); margin-top:10px; display:block;">© 2025 · Todos los derechos reservados</span>
+  </div>
+</footer>
+
+</body>
+</html>
